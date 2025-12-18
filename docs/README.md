@@ -46,3 +46,13 @@ Notes:
 - All test cases passed successfully
 - Database is now fully aligned with CSV structure
 - Ready for Week 9 Streamlit integration (login page, dashboard, forms, charts)
+
+Week 10: Final Dashboards & AI Integration
+Instruction:
+Create a secrets file
+The Gemini API key is stored securely in a local secrets file.
+Create a file at:
+.streamlit/secrets.toml
+Inside that file, add:
+GEMINI_API_KEY = "your-api-key-here"
+Replace  with your actual Gemini API key.

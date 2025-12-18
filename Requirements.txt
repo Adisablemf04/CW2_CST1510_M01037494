@@ -1,4 +1,5 @@
 pandas
 bcrypt
 bcrypt==4.2.0
-
+google-generativeai
+python-dotenv
