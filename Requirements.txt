@@ -1,5 +1,7 @@
 pandas
 bcrypt
 bcrypt==4.2.0
+streamlit
+plotly
 google-generativeai
 python-dotenv

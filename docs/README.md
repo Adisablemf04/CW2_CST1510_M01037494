@@ -1,58 +1,37 @@
-Student Name: Pawan Goness
-Student ID: M01037494
-Course: CST1510 -CW2 - Multi-Domain Intelligence Platform
-## Project Description
-A command-line authentication system implementing secure password hashing
-This system allows users to register accounts and log in with proper pass
-## Features
-- Secure password hashing using bcrypt with automatic salt generation
-- User registration with duplicate username prevention
-- User login with password verification
-- Input validation for usernames and passwords
-- File-based user data persistence
-## Technical Implementation
-- Hashing Algorithm: bcrypt with automatic salting
-- Data Storage: Plain text file (`users.txt`) with comma-separated values
-- Password Security: One-way hashing, no plaintext storage
-- Validation: Username (3-20 alphanumeric characters), Password (6-50 character)
+CST1510 Coursework 2 – Multi-Domain Intelligence Platform
+Pawan Goness - M01037494
+Degree: BSc Computer Science (Systems Engineering)
 
-Week 8: Backend Testing & Verification
+Project Overview
+A secure, real-time web application built with Python + Streamlit that delivers intelligent insights for three domains:
 
-Objective:
-To verify the functionality, integrity, and security of the backend database system before integrating a frontend interface in Week 9.
+Cybersecurity Analysts – track and respond to incidents
+Data Scientists – manage and visualize dataset metadata
+IT Administrators – monitor and prioritize support tickets
+Operations domains are implemented with dedicated views and visualizations.
 
-Testing & Verification Summary:
-- Database connects successfully 
-- All 4 tables created 
-- Users migrated from users.txt 
-- CSV data loaded 
-- Registration works 
-- Login works 
-- Can create new incidents 
-- Can read/query incidents 
-- Can update incident status 
-- Can delete incidents 
-- Analytical queries return results 
-- No SQL injection vulnerabilities (all queries use ? placeholders) 
+Key Features
+Secure Authentication – bcrypt hashing, login/registration with SQLite backend (Week 7)
+Database Persistence – SQLite with real data loaded from 3 CSV files (Week 8)
+Live Cybersecurity Dashboard – metrics, interactive bar chart, real-time table (Week 9)
+Incident Reporting – form to add new incidents with instant update
+Multi-Domain Navigation – sidebar switching between Cybersecurity, Data Science, and IT Operations
+Gemini AI Assistant – sidebar AI that analyzes current incidents using real data (Week 10)
+Professional UI – dark mode, responsive layout, clean design
 
-Key Files Updated:
-- main.py — Demo script for database setup, user migration, and CRUD testing
-- main_test.py — Comprehensive test runner for authentication, CRUD, and analytics
-- incidents.py — Updated insert_incident() to match new schema
-- analytic.py — Fixed queries to use category instead of deprecated incident_type
-- Requirements.txt — Cleaned to include only used packages: pandas, bcrypt==4.2.0
-
-Notes:
-- All test cases passed successfully
-- Database is now fully aligned with CSV structure
-- Ready for Week 9 Streamlit integration (login page, dashboard, forms, charts)
-
-Week 10: Final Dashboards & AI Integration
-Instruction:
-Create a secrets file
-The Gemini API key is stored securely in a local secrets file.
+Instruction
 Create a file at:
 .streamlit/secrets.toml
 Inside that file, add:
 GEMINI_API_KEY = "your-api-key-here"
-Replace  with your actual Gemini API key.
+Replace with your actual Gemini API key.
+
+How to Run Locally
+# Clone the repository
+git clone https://github.com/Adisablemf04/CW2_CST1510_M01037494.git
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the app
+streamlit run Login.py
